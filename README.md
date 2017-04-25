@@ -17,6 +17,11 @@ logstash and logstash-input-jdbc must be installed by:
 data from a TOGO database to Elasticsearch database in AWS. Attention needs to be paid to the 
 `schedule` update interval and the location of the SQL files .
 
+### Delete and mapping the ES database
+
+The two shell scripts `delete.sh` and `mapping.sh` perform the deletion of the ES database
+and defining the mapping of the ES database, respectively.
+
 ### *.sql files
 
 The SQLs used in the configuration covance.conf
