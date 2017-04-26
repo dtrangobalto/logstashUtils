@@ -15,6 +15,7 @@ curl -XPUT $ES/covance -d '
           "status":      { "type": "text" , "fielddata": true, "analyzer": "standard" },
           "phase":      { "type": "text" , "fielddata": true, "analyzer": "standard" },
           "user_ids":      { "type": "text" , "fielddata": true, "analyzer": "standard" }
+      }
       },
       "study_countries": { 
         "_all":       { "enabled": true  }, 
@@ -62,7 +63,9 @@ curl -XPUT $ES/covance -d '
           "postal_code":    { "type": "text", "fielddata": true, "analyzer": "standard" }
         }
       }
-           
+
    }
+           
+   
     
 }'
