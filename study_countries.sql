@@ -1,6 +1,7 @@
 
-SELECT id, account_id, name, full_name, grp.roleIds  from rep_001.studies
-left join
-(SELECT study_id, array_to_string(array_agg(role_id), ',') as roleIds from rep_001.study_assignments
-group by study_id ) grp
-on study_id = id
+SELECT sc.id as id, account_id, c.alpha3 as country_code, c.name as country_name, '123' as user_ids 
+FROM 
+rep_001.study_countries sc,
+mdm_001.geo_countries c
+WHERE 
+sc.country_id = c.id
